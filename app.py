@@ -1,22 +1,9 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
-info=[
-    {
-        'name':'Ankit',
-        'DOB':'02-Aug-1994',
-        'city':'Bangalore'
-    },
-    {
-        'name':'Ankur',
-        'DOB':'02-Dec-1998',
-        'city':'Jalandhar'
-    }
-]
-
 @app.route("/")
 def home():
-    return render_template("home.html",values=info)
+    return render_template("home.html")
 
 @app.route("/index")
 def index():
